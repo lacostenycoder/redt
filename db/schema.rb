@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140408210814) do
   create_table "links", force: true do |t|
     t.string  "url"
     t.integer "rank"
-    t.integer "user_id_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: true do |t|
