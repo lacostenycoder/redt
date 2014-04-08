@@ -45,4 +45,10 @@ end
 # gem 'debugger', group: [:development, :test]
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'shoulda-matchers'
+end
+
+group :development do
+
+	gem 'pry-rails'
 end
