@@ -1,8 +1,9 @@
 <div class="posts">
-	
-	<%= @links.each do |link| %>
-	
-	<a href="<% link_path %>"><%= link.title%></a>
+
+	<% @links.each do |link| %>
+<p>
+<a href="<%= link.url %>"> <%= link.title%></a>
+
 	<% end %>
 
 </div>

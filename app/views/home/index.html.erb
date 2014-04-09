@@ -1,8 +1,8 @@
 <div class="posts">
 
-  <%= @links.each do |link| %>
-
-  <a href="<% link.url %>"><%= link.title%></a>
+  <% @links.each do |link| %>
+<div><p>
+  <a href="<%= link.url %>"> <%= link.title%> </a> posted by <%= link_to link.user.username, user_links_path(current_user) %></a>
   <% end %>
 
 </div>

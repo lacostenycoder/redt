@@ -21,7 +21,9 @@ class LinksController < ApplicationController
 	def create
 		@link = Link.new(link_params)
 		@link.rank = 0
+		@link.user_id = (current_user)
 		@link.save
+		redirect_to root
 	end
 
 	def edit
