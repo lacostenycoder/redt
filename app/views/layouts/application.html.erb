@@ -20,11 +20,9 @@
 
   <% if current_user %>
     <%= link_to "My Links", user_links_path(current_user.id) %>
+    <%= link_to "Add link", new_user_link_path %>
   <% end %>
 </nav>
-
-<div class="">
-
 
 
 <%= yield %>

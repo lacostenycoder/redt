@@ -14,12 +14,13 @@ class LinksController < ApplicationController
 	end
 
 	def new
-		@user = User.find(params[:id])
-		@link = Link.new(link_params)
+		@user = User.find(current_user.id)
+		@link = Link.new
 	end
 
 	def create
 		@link = Link.new(link_params)
+		@link.rank = 0
 		@link.save
 	end
 
@@ -39,7 +40,7 @@ class LinksController < ApplicationController
 
 	private
 	def link_params
-		params.require(:link).permit(:title, :url, :rank)
+		params.require(:link).permit(:title, :url)
 	end
 
 end
