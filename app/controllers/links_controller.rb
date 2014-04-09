@@ -9,7 +9,7 @@ class Links < ApplicationController
 	end
 
 	def new
-		@user = Link.new(link_params)
+		@link = Link.new(link_params)
 	end
 
 	def create
@@ -33,7 +33,7 @@ class Links < ApplicationController
 
 	private
 	def link_params
-		params.require(:link).permit(:url, :rank)
+		params.require(:link).permit(:title, :url, :rank)
 	end
 
 end

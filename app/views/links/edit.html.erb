@@ -1,0 +1,8 @@
+<h1><%= link_to @link.title, @link %><h1>
+<h2>Edit Post</h2>
+
+<%= render 'form' %>
+
+
+<%= link_to 'Destroy', @link, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back', links_path %>
