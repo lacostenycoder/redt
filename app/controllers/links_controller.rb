@@ -1,14 +1,20 @@
-class Links < ApplicationController
+class LinksController < ApplicationController
 
 	def index
 		@links = Link.all
 	end
 
+	def my_links
+		@links = current_user.links
+	end
+
 	def show
+		@user = User.find(params[:id])
 		@links = Link.find(params[:id])
 	end
 
 	def new
+		@user = User.find(params[:id])
 		@link = Link.new(link_params)
 	end
 
